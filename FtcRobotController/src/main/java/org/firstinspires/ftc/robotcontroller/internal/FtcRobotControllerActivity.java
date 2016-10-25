@@ -95,6 +95,8 @@ import java.io.File;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
+import cn.codetector.SelfInspectPlus.Selfinspect_p;
+
 public class FtcRobotControllerActivity extends Activity {
 
   public static final String TAG = "RCActivity";
@@ -407,7 +409,7 @@ public class FtcRobotControllerActivity extends Activity {
       }
       return true;
     } else if (id == R.id.action_inspection_mode) {
-      Intent inspectionModeIntent = new Intent(RcInspectionActivity.rcLaunchIntent);
+      Intent inspectionModeIntent = new Intent(this,Selfinspect_p.class);
       startActivity(inspectionModeIntent);
       return true;
     }
